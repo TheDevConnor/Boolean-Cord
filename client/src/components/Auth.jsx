@@ -17,7 +17,7 @@ const initialState  = {
 
 const Auth = () => {
     const [form, setForm] = useState(initialState)
-    const [isSignUp, setIsSignIn] = useState(true)
+    const [isSignUp, setIsSignUp] = useState(true)
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
@@ -31,7 +31,7 @@ const Auth = () => {
         const url = 'http://localhost:5000/auth'
 
         const { data: { token, userId, hashedPassword}} = await axios.post(`${url}/${isSignUp ? 'signup' : 'login'}`,
-            { fullName, username, phoneNumber, avatarURL, password,  })
+            { username, password, fullName, phoneNumber, avatarURL })
 
         cookies.set('token', token)
         cookies.set('username', username)
@@ -44,11 +44,11 @@ const Auth = () => {
             cookies.set('hashedPassword', hashedPassword)
         }
 
-        window.location.reload()
+        window.location.reload();
     }
 
     const switchMode = () => {
-        setIsSignIn((prevIsSignUp) => !prevIsSignUp)
+        setIsSignUp((prevIsSignUp) => !prevIsSignUp)
     }
 
   return (
