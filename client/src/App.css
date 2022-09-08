@@ -1,6 +1,8 @@
 :root {
     --primary-color: #393838;
     --primary-color-alpha: #005eff1a;
+    scroll-behavior: smooth;
+    overflow: hidden;
   }
   
   html,
