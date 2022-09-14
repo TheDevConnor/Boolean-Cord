@@ -23,7 +23,7 @@ const Auth = () => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e, {login}) => {
         e.preventDefault()
 
         const { fullName, username, phoneNumber, avatarURL, password } = form
