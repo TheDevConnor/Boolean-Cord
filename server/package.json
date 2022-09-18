@@ -8,7 +8,16 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Connor",
+    "url": "https://github.com/TheRealHiThere"
+  },
+  "contributors": [
+    {
+      "name": "Матвей Т",
+      "url": "https://github.com/AtomicGamer9523"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
