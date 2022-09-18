@@ -1,0 +1,10 @@
+[package]
+name = "server"
+authors = [
+    "Матвей Т <https://github.com/AtomicGamer9523>"
+]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4"
